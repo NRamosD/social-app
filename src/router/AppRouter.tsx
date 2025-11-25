@@ -1,6 +1,8 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 import GeneralLayout from "../layouts/GeneralLayout";
+import { Button } from "../../components/ui";
+
 
 export const AppRouter = createBrowserRouter([
     {
@@ -17,6 +19,7 @@ export const AppRouter = createBrowserRouter([
                 element: <>
                     <h1>Pagina de path eu</h1>
                     <a href="/eu/eu2">ir a eu2</a>
+                    <Button>qweqweqw</Button>
                     <Outlet/>
                 </>,
                 children: [
