@@ -15,6 +15,14 @@ export const AppRouter = createBrowserRouter([
         errorElement: <h2>Error :c</h2>,
         children: [
             {
+                path: "/",
+                element: <><h1>pagina por defecto</h1></>,
+            },
+            {
+                path: "*",
+                element: <><h1>pagina por defecto</h1></>,
+            },
+            {
                 path:"eu",
                 element: <>
                     <h1>Pagina de path eu</h1>

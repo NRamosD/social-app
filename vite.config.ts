@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
@@ -10,12 +11,13 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "."),
-      "@/components": path.resolve(__dirname, "components"),
-      "@/ui": path.resolve(__dirname, "components/ui"),
-      "@/lib": path.resolve(__dirname, "lib"),
-      "@/hooks": path.resolve(__dirname, "hooks"),
+      "@": path.resolve(__dirname, "./src")
     }
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './testSetup.ts', 
   }
 
 })
