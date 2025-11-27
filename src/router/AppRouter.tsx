@@ -2,6 +2,8 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 import GeneralLayout from "../layouts/GeneralLayout";
 import { Button } from "../../components/ui";
+import Dashboard from "../modules/dashboard/Dashboard";
+
 
 
 export const AppRouter = createBrowserRouter([
@@ -16,7 +18,7 @@ export const AppRouter = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <><h1>pagina por defecto</h1></>,
+                element:<Dashboard/> ,
             },
             {
                 path: "*",
